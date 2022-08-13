@@ -3,7 +3,11 @@ import items from "../data/items";
 import { Row, Col } from "react-bootstrap";
 import StoreItem from "../components/StoreItem";
 
-const Store = () => {
+type Props = {
+  item: any;
+};
+
+const Store: React.FC<Props> = () => {
   return (
     <>
       <h2>Store</h2>

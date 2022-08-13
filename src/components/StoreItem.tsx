@@ -1,4 +1,5 @@
 import React from "react";
+import { Card } from "react-bootstrap";
 
 type StoreItemProps = {
   id: number;
@@ -8,7 +9,11 @@ type StoreItemProps = {
 };
 
 const StoreItem = ({ id, name, price, image }: StoreItemProps) => {
-  return <div>StoreItem</div>;
+  return (
+    <Card>
+      <Card.Img variant="top" src={image} />
+    </Card>
+  );
 };
 
 export default StoreItem;
