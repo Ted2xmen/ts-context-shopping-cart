@@ -13,7 +13,10 @@ const App = () => {
         <Container className="mb-5">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/store" element={<Store />} />
+            <Route
+              path="/store"
+              element={<Store id={0} image={""} title={""} price={0} />}
+            />
             <Route path="*" element={<h1>Not Found</h1>} />
           </Routes>
         </Container>

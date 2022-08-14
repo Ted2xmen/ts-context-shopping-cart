@@ -1,5 +1,5 @@
 import React, { Key } from "react";
-import items from "../data/items";
+import items from "../data/items.json";
 import { Row, Col } from "react-bootstrap";
 import StoreItem from "../components/StoreItem";
 

@@ -4,7 +4,7 @@ import { useShoppingCart } from "../hooks/useShoppingCart";
 import { formatCurrency } from "../utilites/formatCurrency";
 import CartItem from "./CartItem";
 import StoreItem from "./StoreItem";
-import items from "../data/items";
+import items from "../data/items.json";
 
 const ShoppingCart = () => {
   const { closeCart, cartItems, isOpen } = useShoppingCart();
@@ -23,7 +23,7 @@ const ShoppingCart = () => {
             Total:
             {formatCurrency(
               cartItems.reduce((total, cartItem) => {
-                const item = items.find((i) => i.id === cartItem.id);
+                const item = items.find((i: any) => i.id === cartItem.id);
                 return total + (item?.price || 0) * cartItem.quantity;
               }, 0)
             )}
