@@ -21,4 +21,6 @@ export type ShoppingCartContextProps = {
 export type CartItem = {
     id: number;
     quantity: number;
+    i: any
+
 }
