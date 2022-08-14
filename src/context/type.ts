@@ -6,6 +6,12 @@ export type ShoppingCartProviderProps = {
 };
 
 export type ShoppingCartContextProps = {
+    openCart: () => void;
+    closeCart: () => void;
+    cartQuantity: number;
+    cartItems: CartItem[];
+
+    isOpen: boolean;
     getItemQuantity: (id: number) => number;
     increaseCartQuantity: (id: number) => void;
     decreaseCartQuantity: (id: number) => void;
